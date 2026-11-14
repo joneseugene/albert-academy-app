@@ -44,7 +44,7 @@ export function HomeSection({
       id={id}
       aria-labelledby={`${id}-title`}
       className={cn(
-        "py-14 sm:py-20",
+        "py-12 sm:py-20",
         muted && "bg-linear-to-b from-transparent via-muted/70 to-transparent",
       )}
     >
@@ -253,7 +253,7 @@ function Fact({ term, detail, italic }: { term: string; detail: string; italic?:
   return (
     <div className="grid gap-0.5 py-3 pr-3 [&+&]:border-l [&+&]:pl-3">
       <dt className="text-xs text-muted-foreground">{term}</dt>
-      <dd className={cn("truncate font-medium", italic && "italic")}>{detail}</dd>
+      <dd className={cn("font-medium break-words", italic && "italic")}>{detail}</dd>
     </div>
   );
 }

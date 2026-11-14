@@ -37,9 +37,9 @@ export function HomeHero({ school, latest, photos, portraits, fact, lead }: Prop
   return (
     // The aura: soft burgundy and gold light behind the hero.
     <section className="aura overflow-hidden border-b">
-      <Container className="grid items-center gap-12 py-12 sm:py-16 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:py-20">
+      <Container className="grid grid-cols-[minmax(0,1fr)] items-center gap-10 py-10 sm:gap-12 sm:py-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-14 lg:py-20">
         {/* ---------- Copy ---------- */}
-        <div className="grid justify-items-start gap-5">
+        <div className="grid min-w-0 grid-cols-[minmax(0,1fr)] justify-items-start gap-5">
           {latest && (
             <Link
               href={`${site.news}/${latest.id}`}
@@ -48,7 +48,7 @@ export function HomeHero({ school, latest, photos, portraits, fact, lead }: Prop
               <span className="rounded-full bg-primary px-2 py-0.5 text-[11px] font-medium text-primary-foreground">
                 Latest
               </span>
-              <span className="truncate">{latest.title}</span>
+              <span className="min-w-0 truncate">{latest.title}</span>
               <ArrowRightIcon className="size-3 shrink-0 transition-transform group-hover:translate-x-0.5" />
             </Link>
           )}
@@ -141,7 +141,7 @@ export function HomeHero({ school, latest, photos, portraits, fact, lead }: Prop
           {/* Floating: school song */}
           <Link
             href={site.song}
-            className="group absolute -bottom-5 left-3 flex items-center gap-3 rounded-2xl border bg-background/90 p-2 pr-4 backdrop-blur sm:left-6"
+            className="group absolute -bottom-5 left-3 hidden items-center gap-3 rounded-2xl border bg-background/90 p-2 pr-4 backdrop-blur sm:left-6 sm:flex"
           >
             <span className="inline-flex size-9 items-center justify-center rounded-full bg-primary text-primary-foreground transition-transform group-hover:scale-105">
               <MusicIcon className="size-4" />
@@ -190,7 +190,7 @@ function HeroStat({
   return (
     <div className="grid min-w-0 gap-0.5 px-3 py-2.5 sm:px-4">
       <dt className="text-[11px] text-muted-foreground">{label}</dt>
-      <dd className={cn("truncate text-sm font-medium", italic && "italic")}>{value}</dd>
+      <dd className={cn("text-sm font-medium break-words", italic && "italic")}>{value}</dd>
     </div>
   );
 }

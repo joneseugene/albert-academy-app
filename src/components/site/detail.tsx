@@ -18,7 +18,7 @@ export function DetailHeader({
   lead?: ReactNode;
 }) {
   return (
-    <Container className="grid max-w-3xl gap-5 pt-10 sm:pt-16">
+    <Container className="grid max-w-3xl gap-4 pt-8 sm:gap-5 sm:pt-16">
       <Link
         href={back.href}
         className="inline-flex w-fit items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
@@ -26,10 +26,10 @@ export function DetailHeader({
         <ArrowLeftIcon className="size-4" /> {back.label}
       </Link>
       {meta && <div className="flex flex-wrap items-center gap-2 text-sm">{meta}</div>}
-      <h1 className="text-4xl leading-tight font-semibold tracking-tight text-balance sm:text-5xl">
+      <h1 className="font-serif text-3xl leading-tight font-medium tracking-tight text-balance sm:text-5xl">
         {title}
       </h1>
-      {lead && <p className="text-xl text-pretty text-muted-foreground">{lead}</p>}
+      {lead && <p className="text-lg text-pretty text-muted-foreground sm:text-xl">{lead}</p>}
     </Container>
   );
 }

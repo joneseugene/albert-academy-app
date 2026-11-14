@@ -40,7 +40,7 @@ export default async function LivePage() {
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="grid gap-2">
                 <LiveBadge className="w-fit" />
-                <h2 className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
+                <h2 className="font-serif text-2xl font-medium tracking-tight text-balance sm:text-3xl">
                   {now.title}
                 </h2>
               </div>

@@ -138,7 +138,7 @@ export function SongPlayer({
             <p className="text-xs font-medium tracking-wider text-primary uppercase">
               {playing ? "Now playing" : "School song"}
             </p>
-            <h3 className="text-2xl font-semibold tracking-tight text-balance">{title}</h3>
+            <h3 className="font-serif text-2xl font-medium tracking-tight text-balance">{title}</h3>
             {credits && <p className="text-sm text-muted-foreground">{credits}</p>}
           </div>
 

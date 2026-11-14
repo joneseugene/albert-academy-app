@@ -68,10 +68,12 @@ async function Alumnus({ params }: Pick<PageProps<"/alumni/[id]">, "params">) {
                 <span className="rounded-full border px-3 py-1 text-xs">“{item.nickname}”</span>
               )}
             </div>
-            <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+            <h1 className="font-serif text-3xl font-medium tracking-tight text-balance sm:text-5xl">
               {item.name}
             </h1>
-            {item.position && <p className="text-xl text-muted-foreground">{item.position}</p>}
+            {item.position && (
+              <p className="text-lg text-muted-foreground sm:text-xl">{item.position}</p>
+            )}
             {item.summary && (
               <Prose html={item.summary} className="border-l-2 border-primary pl-4" />
             )}
