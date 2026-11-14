@@ -33,7 +33,7 @@ export function NewsCard({ item, large }: { item: News; large?: boolean }) {
         <h3
           className={
             large
-              ? "text-2xl font-semibold tracking-tight text-balance group-hover:text-primary sm:text-3xl"
+              ? "font-serif text-2xl font-medium tracking-tight text-balance group-hover:text-primary sm:text-3xl"
               : "text-lg font-semibold tracking-tight text-balance group-hover:text-primary"
           }
         >

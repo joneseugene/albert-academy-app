@@ -75,7 +75,9 @@ export default async function AboutPage() {
       {school?.about && (
         <Section id="about" className="scroll-mt-16">
           <div className="grid gap-8 lg:grid-cols-[16rem_1fr] lg:gap-16">
-            <h2 className="text-2xl font-semibold tracking-tight">About the school</h2>
+            <h2 className="font-serif text-2xl font-medium tracking-tight sm:text-3xl">
+              About the school
+            </h2>
             <div className="grid max-w-3xl gap-8">
               {school.aboutPhotoUrl && (
                 <Media
@@ -131,7 +133,9 @@ export default async function AboutPage() {
       {school?.history && (
         <Section id="history" muted className="scroll-mt-16">
           <div className="grid gap-8 lg:grid-cols-[16rem_1fr] lg:gap-16">
-            <h2 className="text-2xl font-semibold tracking-tight">Our history</h2>
+            <h2 className="font-serif text-2xl font-medium tracking-tight sm:text-3xl">
+              Our history
+            </h2>
             <Prose html={school.history} className="max-w-3xl" />
           </div>
         </Section>
@@ -246,7 +250,7 @@ export default async function AboutPage() {
         <section className="py-16 sm:py-24">
           <Container className="grid justify-items-center gap-4 text-center">
             <QuoteIcon className="size-8 text-primary" aria-hidden />
-            <p className="max-w-3xl text-3xl font-semibold tracking-tight text-balance sm:text-5xl">
+            <p className="max-w-3xl font-serif text-2xl font-medium tracking-tight text-balance sm:text-4xl">
               {school.motto}
             </p>
           </Container>

@@ -72,14 +72,14 @@ export function NewsBrowser({ news }: { news: News[] }) {
                 setShown(PAGE);
               }}
               placeholder="Search news"
-              className="h-10 w-full rounded-full border bg-background pr-4 pl-10 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/30"
+              className="h-10 w-full rounded-full border bg-background pr-4 pl-10 text-base outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/30 sm:text-sm"
             />
           </label>
           <select
             value={order}
             onChange={(e) => setOrder(e.target.value as "newest" | "oldest")}
             aria-label="Sort"
-            className="h-10 rounded-full border bg-background px-4 text-sm outline-none focus-visible:ring-3 focus-visible:ring-ring/30"
+            className="h-10 rounded-full border bg-background px-4 text-base outline-none focus-visible:ring-3 focus-visible:ring-ring/30 sm:text-sm"
           >
             <option value="newest">Newest first</option>
             <option value="oldest">Oldest first</option>

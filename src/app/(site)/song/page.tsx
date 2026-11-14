@@ -20,7 +20,7 @@ export default async function SongPage() {
           <span className="inline-flex rounded-full border px-3 py-1 text-xs font-medium text-muted-foreground">
             School song
           </span>
-          <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
+          <h1 className="font-serif text-4xl font-medium tracking-tight text-balance sm:text-5xl">
             {school?.songTitle ?? "Our school song"}
           </h1>
           <p className="text-lg text-muted-foreground">

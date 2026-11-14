@@ -46,7 +46,7 @@ export default async function ActivitiesPage() {
       ) : (
         groups.map((g, i) => (
           <Section key={g.key} id={g.key} muted={i % 2 === 1} className="scroll-mt-16">
-            <h2 className="mb-8 text-2xl font-semibold tracking-tight sm:text-3xl">
+            <h2 className="mb-8 font-serif text-2xl font-medium tracking-tight sm:text-3xl">
               {ACTIVITY_CATEGORIES[g.key]}
             </h2>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

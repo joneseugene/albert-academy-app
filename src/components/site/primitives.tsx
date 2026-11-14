@@ -27,7 +27,7 @@ export function Section({
   muted?: boolean;
 }) {
   return (
-    <section id={id} className={cn("py-14 sm:py-20", muted && "bg-muted/50", className)}>
+    <section id={id} className={cn("py-12 sm:py-20", muted && "bg-muted/50", className)}>
       <Container>{children}</Container>
     </section>
   );
