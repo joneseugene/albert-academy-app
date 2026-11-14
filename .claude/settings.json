@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-CimInstance Win32_Process -Filter \"Name='node.exe'\" | Select-Object ProcessId, @{n='cmd';e={$_.CommandLine.Substring\\(0,[Math]::Min\\(140,$_.CommandLine.Length\\)\\)}} | Format-Table -AutoSize | Out-String -Width 220)",
+      "Bash(sed -i 's|return href === \"/\" ? pathname === \"/\" :|return href === routes.home ? pathname === routes.home :|' components/layout/app-sidebar.tsx)",
+      "Bash(sed -i '146,147s|item.href === \"/\"|item.href === routes.home|; 147s|pathname === \"/\"|pathname === routes.home|' config/navigation.ts)",
+      "PowerShell(Set-Location C:\\\\Users\\\\Lenovo\\\\Desktop\\\\2027\\\\albert-academy-app; Get-ChildItem .next -Directory | Select-Object Name; Get-ChildItem .next\\\\cache -Directory -ErrorAction SilentlyContinue | Select-Object Name; Select-String -Path .next\\\\server\\\\app\\\\about.html -Pattern 'TEST' -SimpleMatch -List | Select-Object -First 1 | ForEach-Object { \"about.html has TEST: yes\" }; \\(Get-Item .next\\\\server\\\\app\\\\about.html -ErrorAction SilentlyContinue\\).LastWriteTime)"
+    ]
+  }
+}
